@@ -1,6 +1,6 @@
 ---
-jenkins:
-  name:     "jenkins"
+jenkins_1:
+  name:     "jenkins_1"
   cpus:     2
   memory:   1024
   gui:      false

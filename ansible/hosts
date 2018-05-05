@@ -1,6 +1,6 @@
 [jenkins]
-192.168.88.200
+jenkins_1 ansible_ssh_host=192.168.88.200
 
 [node]
-192.168.88.201
+node_1 ansible_ssh_host=192.168.88.201
 

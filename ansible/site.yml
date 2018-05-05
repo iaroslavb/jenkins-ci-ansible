@@ -14,3 +14,20 @@
     - common
     - jenkins
 
+- hosts: jenkins
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: retrieve public key
+      shell: cat /home/jenkins/.ssh/id_rsa.pub
+      register: jenkins_public_key
+      changed_when: false
+
+- hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: add master public key to slaves
+      authorized_key:
+        user: ansible
+        key: "{{ hostvars['jenkins_1'].jenkins_public_key.stdout }}"
