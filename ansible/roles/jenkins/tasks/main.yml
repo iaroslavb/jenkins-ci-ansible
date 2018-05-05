@@ -9,6 +9,15 @@
     repo: deb http://pkg.jenkins.io/debian-stable binary/
     state: present
 
+- name: Create user for jenkins
+  user:
+    name="jenkins"
+    home="/home/jenkins"
+    shell="/bin/bash"
+    append="true"
+    comment="jenkins"
+    generate_ssh_key="yes"
+
 - name: install jenkins
   apt: name=jenkins state=latest
 
