@@ -1,0 +1,8 @@
+---
+jenkins:
+  name:     "jenkins"
+  cpus:     2
+  memory:   1024
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.200
