@@ -12,7 +12,7 @@
   become_method: sudo
   roles:
     - common
-    - jenkins
+    - iaroslavb.jenkins
 
 - hosts: jenkins
   become: yes
